@@ -15,45 +15,39 @@
       border-color: #ebd188;
       color: #212529;
     }
-
     .btn-primary:hover,
     .btn-outline-primary:hover {
       background-color: #d4bc77; /* hover */
       border-color: #d4bc77;
       color: #212529;
     }
+    .btn-outline-primary { background-color: transparent; }
 
-    .btn-outline-primary {
-      background-color: transparent;
-      color: #212529;
-    }
-
-    .btn-outline-primary:hover {
-      background-color: #ebd188;
-      color: #212529;
-    }
+    /* (Opcional) Evitar que algum overflow interno crie scroll */
+    html, body { height: 100%; }
   </style>
 </head>
-<body class="bg-light d-flex flex-column min-vh-100 justify-content-center align-items-center">
+<body class="bg-light d-flex flex-column vh-100 justify-content-center align-items-center overflow-hidden">
 
-  <div class="text-center w-75 w-lg-25">
+  <!-- Wrapper com padding em vez de margens internas -->
+  <div class="text-center w-75 w-lg-25 py-3">
     <!-- Avatar -->
-    <img src="caroltheastronaut.png" alt="Carol the Astronaut Avatar" class="rounded-circle pb-2" width="100" height="100">
-    
+    <img src="caroltheastronaut.png" alt="Carol the Astronaut Avatar" class="rounded-circle mb-1" width="100" height="100">
+
     <!-- Description -->
-    <h3 class="mb-0">Carol the Astronaut</h3>
-    <p class="text-muted mt-0 pb-4">UX/UI Designer • Illustrator</p>
+    <h3 class="mb-1">Carol the Astronaut</h3>
+    <p class="text-muted mb-3">UX/UI Designer • Illustrator</p>
 
     <!-- Links -->
     <div class="d-flex flex-column gap-3 align-items-center">
       <div class="col-12 col-lg-4">
-         <p class="fs-6 mb-0 fw-bold">👇 Buy my stuff 👇</p>
+        <p class="fs-6 fw-bold mb-1">👇 Buy my stuff 👇</p>
       </div>
       <div class="col-12 col-lg-4">
         <a href="https://www.ko-fi.com/caroltheastronaut" target="_blank" class="btn btn-primary w-100">Shop</a>
       </div>
-      <div class="col-12 col-lg-4 pt-2">
-         <p class="fs-6 mb-0 fw-bold">Other links</p>
+      <div class="col-12 col-lg-4">
+        <p class="fs-6 fw-bold mb-1">Other links</p>
       </div>
       <div class="col-12 col-lg-4">
         <a href="https://www.instagram.com/caroltheastronaut" target="_blank" class="btn btn-outline-primary w-100">Instagram</a>
@@ -66,8 +60,8 @@
       </div>
     </div>
 
-    <!-- Footer -->
-    <p class="pt-4 text-muted small">Free 🇵🇸 / 1.0</p>
+    <!-- Footer (padding em vez de margem) -->
+    <p class="pt-3 text-muted small mb-0">Free 🇵🇸</p>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
